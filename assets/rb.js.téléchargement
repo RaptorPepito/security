@@ -1,0 +1,47 @@
+function rb(settings) {
+	this.pixels = settings.pixels;
+	this.engine = settings.engine || 'rb';
+
+	if (this.engine === 'mytracker') {
+		var opts = settings.opts || {};
+		if (opts.counter_id !== undefined) {
+			var allowed = {user_id: 1, issuer_id: 1, skin: 1, locale: 1, width: 1, height: 1};
+			this.counter_id = opts.counter_id;
+			this.opts = Object.fromEntries(Object.entries(opts).filter(([key]) => allowed[key] === 1));
+		}
+	}
+
+	this.putPixel = function (alias, errMsg) {
+		window.parent.postMessage(JSON.stringify({
+			type: 'billing',
+			action: 'fireEvent',
+			action_params: {
+				eventName: alias,
+				errorMessage: errMsg,
+			}
+		}), '*');
+		if (this.pixels[alias]) {
+			if (this.engine === 'rb') {
+				new Image().src = 'https://rs.mail.ru/d' + this.pixels[alias] + '.gif?' + Math.random();
+			} else if (this.engine === 'mytracker' && this.counter_id !== undefined) {
+				var _tmr = window._tmr || (window._tmr = []);
+				var event = {
+					id: this.counter_id,
+					type: 'reachGoal',
+					goal: alias,
+					params: this.opts
+				};
+				if (this.opts.user_id) event.userid = this.opts.user_id;
+				_tmr.push(event);
+			}
+			window.parent.postMessage(JSON.stringify({
+				type: 'billing',
+				action: 'putPixel',
+				action_params: {
+					alias: alias,
+					pixel: this.pixels[alias]
+				}
+			}), '*');
+		}
+	};
+}

